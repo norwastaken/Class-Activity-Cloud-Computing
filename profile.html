@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ron Alcantara | Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="page">
+
+    <header class="Headings">
+      <p class="eyebrow">Student Profile</p>
+      <h1>Ron Alcantara</h1>
+      <p class="role">3rd Year<br>Bachelor of Science in Computer Science<br>Cainta Catholic College</p>
+    </header>
+
+    <div class="layout">
+
+      <aside class="sidebar">
+        <img src="profile.jpg" alt="Portrait of Ron Alcantara" class="profile-picture">
+
+        <table class="info-table">
+          <tbody>
+            <tr>
+              <th>Age</th>
+              <td>25</td>
+            </tr>
+            <tr>
+              <th>Address</th>
+              <td>Taytay, Rizal</td>
+            </tr>
+            <tr>
+              <th>Grade / Year</th>
+              <td>3rd Year College</td>
+            </tr>
+            <tr>
+              <th>Section</th>
+              <td>BSCS 3-A</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <button class="btn-learn-more" type="button" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+          Learn More
+        </button>
+      </aside>
+
+      <main class="content">
+
+        <section id="about" class="block">
+          <h2>About Me(short intro)</h2>
+          <p>
+            I'm Ron, a BSCS college student who is very curious about computer programming but is yet decided on what to do in his future.
+            I mostly spend my time playing mobile games, watching youtube videos, and taking care of my 2 cats. I also enjoy playing the guitar and joining my siblings in their games.
+            Lastly, I am a very curious person who is always looking for new things to learn and explore, plus trying my best to change my super introvertive personality since grade school into a more social one.
+        </section>
+
+        <section class="block">
+          <h2>Hobbies</h2>
+          <ul class="plain-list">
+            <li>Watching Youtube Informational/Latest trend Videos</li>
+            <li>Playing Mobile Games</li>
+            <li>Playing the Guitar</li>
+            <li>Joining my Siblings in their Games</li>
+            <li>Taking care of my 2 cats</li>
+          </ul>
+        </section>
+
+        <section class="block">
+          <h2>Favorite Subjects</h2>
+          <ol class="plain-list">
+            <li>Web Development</li>
+            <li>Computer Programming</li>
+            <li>Database Management</li>
+            <li>Animation</li>
+          </ol>
+        </section>
+
+      </main>
+
+    </div>
+
+    <footer class="footer">
+      <p>Ron Alcantara<br>Web Development Class</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>

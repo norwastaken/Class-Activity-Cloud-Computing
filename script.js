@@ -35,6 +35,7 @@ function showWelcomePopup() {
 // Toggle About Me section visibility
 function toggleAboutMe() {
   const aboutSection = document.getElementById('about');
+  // Check if display is 'none' or if it's not set (default is visible)
   if (aboutSection.style.display === 'none') {
     aboutSection.style.display = 'block';
   } else {

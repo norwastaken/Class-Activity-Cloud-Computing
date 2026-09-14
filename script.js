@@ -26,11 +26,8 @@ function showWelcomePopup() {
 
 function toggleAboutMe() {
   const aboutSection = document.getElementById('about');
-  if (aboutSection.style.display === 'none') {
-    aboutSection.style.display = 'block';
-  } else {
-    aboutSection.style.display = 'none';
-  }
+  const isHidden = aboutSection.style.display === 'none';
+  aboutSection.style.display = isHidden ? 'block' : 'none';
 }
 
 function updateDateTime() {

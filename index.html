@@ -9,13 +9,23 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+  
   <div class="page">
 
     <header class="Headings">
       <p class="eyebrow">Student Profile</p>
       <h1>Ron Alcantara</h1>
       <p class="role">3rd Year<br>Bachelor of Science in Computer Science<br>Cainta Catholic College</p>
+      
+      <!-- Navigation Buttons -->
+      <div class="header-buttons">
+        <button class="btn-nav" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+          Go to About Me
+        </button>
+        <button class="btn-theme" onclick="toggleBackgroundColor()">
+          Toggle Theme
+        </button>
+      </div>
     </header>
 
     <div class="layout">
@@ -56,7 +66,7 @@
           <p>
             I'm Ron, a BSCS college student who is very curious about computer programming but is yet decided on what to do in his future.
             I mostly spend my time playing mobile games, watching youtube videos, and taking care of my 2 cats. I also enjoy playing the guitar and joining my siblings in their games.
-            Lastly, I am a very curious person who is always looking for new things to learn and explore, plus trying my best to change my super introvertive personality since grade school into a more social one.
+            Lastly, I am a very curious person who is always looking for new things to learn and explore, plus trying my best to change my super introvertive personality since grade school into a [...]
             If I were to pick a favourite language, I'd say I love python so far.
         </section>
 
@@ -91,5 +101,6 @@
 
   </div>
 
+  <script src="script.js"></script>
 </body>
 </html>

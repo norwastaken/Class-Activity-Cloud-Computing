@@ -27,7 +27,51 @@ function loadBackgroundColor() {
   }
 }
 
+// Show welcome popup
+function showWelcomePopup() {
+  alert('Welcome to my personal Website!');
+}
+
+// Toggle About Me section visibility
+function toggleAboutMe() {
+  const aboutSection = document.getElementById('about');
+  if (aboutSection.style.display === 'none') {
+    aboutSection.style.display = 'block';
+  } else {
+    aboutSection.style.display = 'none';
+  }
+}
+
+// Display current date and time
+function updateDateTime() {
+  const now = new Date();
+  const dateTimeString = now.toLocaleString('en-US', {
+    weekday: 'short',
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit'
+  });
+  document.getElementById('datetime-display').textContent = dateTimeString;
+}
+
+// Update date and time every second
+function initializeDateTime() {
+  updateDateTime();
+  setInterval(updateDateTime, 1000);
+}
+
+// Handle contact form submission (does nothing)
+function handleContactSubmit(event) {
+  event.preventDefault();
+  // Form submission does nothing - just prevents default behavior
+  document.getElementById('contact-form').reset();
+}
+
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', function() {
   loadBackgroundColor();
+  initializeDateTime();
 });

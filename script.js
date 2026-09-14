@@ -20,14 +20,23 @@ function loadBackgroundColor() {
   }
 }
 
-function showWelcomePopup() {
-  alert('Welcome to my personal Website!');
+function openWelcomePopup() {
+  const modal = document.getElementById('welcomeModal');
+  modal.style.display = 'block';
+}
+
+function closeWelcomePopup() {
+  const modal = document.getElementById('welcomeModal');
+  modal.style.display = 'none';
 }
 
 function toggleAboutMe() {
   const aboutSection = document.getElementById('about');
-  const isHidden = aboutSection.style.display === 'none';
-  aboutSection.style.display = isHidden ? 'block' : 'none';
+  if (aboutSection.style.display === 'none') {
+    aboutSection.style.display = 'block';
+  } else {
+    aboutSection.style.display = 'none';
+  }
 }
 
 function updateDateTime() {
@@ -53,6 +62,13 @@ function handleContactSubmit(event) {
   event.preventDefault();
   document.getElementById('contact-form').reset();
 }
+
+window.addEventListener('click', function(event) {
+  const modal = document.getElementById('welcomeModal');
+  if (event.target == modal) {
+    modal.style.display = 'none';
+  }
+});
 
 document.addEventListener('DOMContentLoaded', function() {
   loadBackgroundColor();

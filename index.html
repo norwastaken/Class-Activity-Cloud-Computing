@@ -25,6 +25,17 @@
         <button class="btn-theme" onclick="toggleBackgroundColor()">
           Toggle Theme
         </button>
+        <button class="btn-welcome" onclick="showWelcomePopup()">
+          Welcome
+        </button>
+        <button class="btn-toggle-about" onclick="toggleAboutMe()">
+          Hide/Show About Me
+        </button>
+      </div>
+
+      <!-- Date and Time Display -->
+      <div class="datetime-container">
+        <span id="datetime-display"></span>
       </div>
     </header>
 
@@ -68,6 +79,7 @@
             I mostly spend my time playing mobile games, watching youtube videos, and taking care of my 2 cats. I also enjoy playing the guitar and joining my siblings in their games.
             Lastly, I am a very curious person who is always looking for new things to learn and explore, plus trying my best to change my super introvertive personality since grade school into a [...]
             If I were to pick a favourite language, I'd say I love python so far.
+          </p>
         </section>
 
         <section class="block">
@@ -89,6 +101,29 @@
             <li>Database Management</li>
             <li>Animation</li>
           </ol>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="block contact-section">
+          <h2>Contact Me</h2>
+          <form id="contact-form" onsubmit="handleContactSubmit(event)" class="contact-form">
+            <div class="form-group">
+              <label for="fullname">Full Name:</label>
+              <input type="text" id="fullname" name="fullname" value="Ron Lester Alcantara" readonly>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" value="ronlesteralcantara19@gmail.com" readonly>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" rows="5" placeholder="Type your message here..."></textarea>
+            </div>
+            
+            <button type="submit" class="btn-submit">Submit</button>
+          </form>
         </section>
 
       </main>

@@ -24,7 +24,7 @@
         <button class="btn-theme" onclick="toggleBackgroundColor()">
           Toggle Theme
         </button>
-        <button class="btn-welcome" onclick="showWelcomePopup()">
+        <button class="btn-welcome" onclick="openWelcomePopup()">
           Welcome
         </button>
         <button class="btn-toggle-about" onclick="toggleAboutMe()">
@@ -131,6 +131,15 @@
       <p>Ron Alcantara<br>Web Development Class</p>
     </footer>
 
+  </div>
+
+  <div id="welcomeModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeWelcomePopup()">&times;</span>
+      <h2>Welcome!</h2>
+      <p>Welcome to my personal Website!</p>
+      <button class="btn-modal-close" onclick="closeWelcomePopup()">Close</button>
+    </div>
   </div>
 
   <script src="script.js"></script>

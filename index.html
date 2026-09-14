@@ -12,7 +12,7 @@
   
   <div class="page">
 
-    <header class="Headings">
+    <header class="Headings" id="home">
       <p class="eyebrow">Student Profile</p>
       <h1>Ron Alcantara</h1>
       <p class="role">3rd Year<br>Bachelor of Science in Computer Science<br>Cainta Catholic College</p>
@@ -80,7 +80,19 @@
           </p>
         </section>
 
-        <section class="block">
+        <section id="skills" class="block">
+          <h2>Skills</h2>
+          <ul class="plain-list">
+            <li>Python</li>
+            <li>HTML &amp; CSS</li>
+            <li>JavaScript</li>
+            <li>Java</li>
+            <li>SQL / Database Management</li>
+            <li>Git &amp; GitHub</li>
+          </ul>
+        </section>
+
+        <section id="hobbies" class="block">
           <h2>Hobbies</h2>
           <ul class="plain-list">
             <li>Watching Youtube Informational/Latest trend Videos</li>
@@ -101,7 +113,17 @@
           </ol>
         </section>
 
-        <section class="block contact-section">
+        <section id="gallery" class="block">
+          <h2>Gallery</h2>
+          <div class="gallery-grid">
+            <img src="profile.jpg" alt="Gallery photo of Ron Alcantara" class="gallery-photo">
+            <img src="profile.jpg" alt="Gallery photo of Ron Alcantara" class="gallery-photo">
+            <img src="profile.jpg" alt="Gallery photo of Ron Alcantara" class="gallery-photo">
+            <img src="profile.jpg" alt="Gallery photo of Ron Alcantara" class="gallery-photo">
+          </div>
+        </section>
+
+        <section class="block contact-section" id="contact">
           <h2>Contact Me</h2>
           <form id="contact-form" onsubmit="handleContactSubmit(event)" class="contact-form">
             <div class="form-group">

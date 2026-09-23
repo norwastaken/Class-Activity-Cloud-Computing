@@ -1,7 +1,7 @@
 function toggleBackgroundColor() {
   const body = document.body;
   const currentColor = window.getComputedStyle(body).backgroundColor;
-  
+
   if (currentColor === 'rgb(247, 245, 241)' || currentColor === 'rgb(135, 206, 235)') {
     if (currentColor === 'rgb(247, 245, 241)') {
       body.style.backgroundColor = '#87ceeb';
@@ -22,16 +22,19 @@ function loadBackgroundColor() {
 
 function openWelcomePopup() {
   const modal = document.getElementById('welcomeModal');
+  if (!modal) return;
   modal.style.display = 'block';
 }
 
 function closeWelcomePopup() {
   const modal = document.getElementById('welcomeModal');
+  if (!modal) return;
   modal.style.display = 'none';
 }
 
 function toggleAboutMe() {
   const aboutSection = document.getElementById('about');
+  if (!aboutSection) return;
   if (aboutSection.style.display === 'none') {
     aboutSection.style.display = 'block';
   } else {
@@ -40,6 +43,8 @@ function toggleAboutMe() {
 }
 
 function updateDateTime() {
+  const display = document.getElementById('datetime-display');
+  if (!display) return;
   const now = new Date();
   const dateTimeString = now.toLocaleString('en-US', {
     weekday: 'short',
@@ -50,27 +55,29 @@ function updateDateTime() {
     minute: '2-digit',
     second: '2-digit'
   });
-  document.getElementById('datetime-display').textContent = dateTimeString;
+  display.textContent = dateTimeString;
 }
 
 function initializeDateTime() {
+  if (!document.getElementById('datetime-display')) return;
   updateDateTime();
   setInterval(updateDateTime, 1000);
 }
 
 function handleContactSubmit(event) {
   event.preventDefault();
-  document.getElementById('contact-form').reset();
+  const form = document.getElementById('contact-form');
+  if (form) form.reset();
 }
 
-window.addEventListener('click', function(event) {
+window.addEventListener('click', function (event) {
   const modal = document.getElementById('welcomeModal');
-  if (event.target == modal) {
+  if (modal && event.target == modal) {
     modal.style.display = 'none';
   }
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   loadBackgroundColor();
   initializeDateTime();
 });

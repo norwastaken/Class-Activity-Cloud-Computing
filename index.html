@@ -3,107 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ron Alcantara | Home</title>
+  <title>Ron Alcantara | Login</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <div class="page">
-
-    <header class="Headings" id="home">
+    <header class="Headings">
       <p class="eyebrow">Student Profile</p>
       <h1>Ron Alcantara</h1>
       <p class="role">3rd Year<br>Bachelor of Science in Computer Science<br>Cainta Catholic College</p>
-
-      <nav class="site-nav">
-        <a href="index.html" class="nav-link active">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-      </nav>
-
-      <div class="header-buttons">
-        <button class="btn-theme" onclick="toggleBackgroundColor()">
-          Toggle Theme
-        </button>
-        <button class="btn-welcome" onclick="openWelcomePopup()">
-          Welcome
-        </button>
-      </div>
-
-      <div class="datetime-container">
-        <span id="datetime-display"></span>
-      </div>
+      <div class="datetime-container"><span id="datetime-display"></span></div>
     </header>
 
-    <div class="layout">
-
-      <aside class="sidebar">
-        <img src="profile.jpg" alt="Portrait of Ron Alcantara" class="profile-picture">
-
-        <table class="info-table">
-          <tbody>
-            <tr>
-              <th>Age</th>
-              <td>25</td>
-            </tr>
-            <tr>
-              <th>Address</th>
-              <td>Taytay, Rizal</td>
-            </tr>
-            <tr>
-              <th>Grade / Year</th>
-              <td>3rd Year College</td>
-            </tr>
-            <tr>
-              <th>Section</th>
-              <td>BSCS 3-A</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <a href="about.html" class="btn-learn-more">Learn More</a>
-      </aside>
-
-      <main class="content">
-
-        <section class="block">
-          <h2>Welcome</h2>
-          <p>
-            Hi, I'm Ron — a 3rd year BSCS student at Cainta Catholic College. This site is a quick look
-            at who I am, what I'm learning, and how to reach me. Head to the About page for my background,
-            skills, and hobbies, or jump straight to Contact if you'd like to get in touch.
-          </p>
-        </section>
-
-        <section class="block">
-          <h2>Snapshot</h2>
-          <div class="gallery-grid">
-            <img src="profile2.jpg" alt="Photo of Ron Alcantara" class="gallery-photo">
-            <img src="profile3.jpg" alt="Photo of Ron Alcantara" class="gallery-photo">
+    <main class="login-wrap">
+      <section class="block contact-section login-card">
+        <h2>Login</h2>
+        <form id="login-form" class="contact-form" onsubmit="handleLogin(event)">
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" autocomplete="off" placeholder="Enter your name">
           </div>
-        </section>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Enter your password">
+          </div>
+          <p id="login-error" class="error-text" role="alert"></p>
+          <button type="submit" class="btn-submit">Login</button>
+          <p class="hint">Demo: use any username. Password is <strong>1234</strong>.</p>
+        </form>
+      </section>
+    </main>
 
-      </main>
-
-    </div>
-
-    <footer class="footer">
-      <p>Ron Alcantara<br>Web Development Class</p>
-    </footer>
-
+    <footer class="footer"><p>Ron Alcantara<br>Web Development Class</p></footer>
   </div>
-
-  <div id="welcomeModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeWelcomePopup()">&times;</span>
-      <h2>Welcome!</h2>
-      <p>Welcome to my personal Website!</p>
-      <button class="btn-modal-close" onclick="closeWelcomePopup()">Close</button>
-    </div>
-  </div>
-
   <script src="script.js"></script>
 </body>
 </html>
